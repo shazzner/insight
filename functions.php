@@ -1,7 +1,7 @@
 <?php
 /*----------------------------------------------------------------------------*/
 /* Theme Setup
-   /*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 
 add_action( 'after_setup_theme', 'insight_theme_setup', 10 );
 
@@ -11,10 +11,10 @@ add_action( 'after_setup_theme', 'insight_theme_setup', 10 );
  * Perform basic theme setup, registrations and init actions during theme
  * initialization.
  *
- * @package liftoff
+ * @package insight
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford <@okayerik>
+ * @author Chris Hardee <shazzner@heavyheavy.com>
  *
  */
 
@@ -61,4 +61,35 @@ function liftoff_theme_setup() {
 		'update-available' => __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.', 'insight' ),
     ) );
     
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Stylesheets
+/*----------------------------------------------------------------------------*/
+
+add_action( 'wp_enqueue_scripts', 'insight_theme_stylesheets', 10 );
+
+/**
+ * Theme Stylesheets
+ *
+ * Register and enqueue all theme related stylesheets using wp_register_style()
+ * and wp_enqueue_style() respectively.
+ *
+ * @package liftoff
+ * @version 1.0.0
+ * @since 1.0.0
+ * @author Chris Hardee <shazzner@heavyheavy.com>
+ *
+ */
+
+function insight_theme_stylesheets() {
+    
+    if ( !is_admin() ) {
+        
+        // register parent theme stylesheet
+        wp_register_style( 'viability-core', get_template_directory_uri() . '/assets/css/main.min.css', array( 'viability-fonts', 'viability-icons' ), wp_get_theme( 'viability' )->get( 'Version' ), 'screen' );
+        
+        wp_enqueue_style( 'insight', get_stylesheet_directory_uri() . '/assets/css/insight.min.css', array( 'viability-core' ), wp_get_theme()->get( 'Version' ), 'screen' );
+        
+    }
 }
