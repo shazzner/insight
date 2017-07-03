@@ -118,13 +118,13 @@ function insight_category_loop( $category ) {
 }
 
 /*----------------------------------------------------------------------------*/
-/* Search Loop
+/* Excerpt Loop
 /*----------------------------------------------------------------------------*/
 
 /**
- * Search Loop
+ * Excerpt Loop
  *
- * Loop through posts via search results
+ * Loop through posts and only display link plus excerpt
  *
  * @package insight
  * @version 1.0.0
@@ -133,7 +133,7 @@ function insight_category_loop( $category ) {
  *
  */
 
-function insight_search_loop( ) {
+function insight_excerpt_loop( ) {
 
     while ( have_posts() ) : the_post();
         

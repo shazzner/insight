@@ -22,7 +22,7 @@ get_header(); ?>
                     __( 'Category: ', 'insight' ), false )
         );
 
-        insight_category_loop( single_cat_title( '', false ) );
+        insight_excerpt_loop();
         ?>
         </div></div>
         <?php

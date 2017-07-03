@@ -23,7 +23,7 @@ get_header(); ?>
                 get_search_query()                
         );
 
-        insight_search_loop();
+        insight_excerpt_loop();
         ?>
         </div></div>
         <?php
