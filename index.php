@@ -24,11 +24,12 @@ get_header(); viability_blog_hero(); ?>
                 'order' => 'ASC', ) ) as $category ) {
             ?>
                 <div class="category-container-box default-bg-color">
-            <?php printf ( '<h2>%1$s</h2>',
-                           __( $category->name ) ); ?>
+            <?php printf ( '<h2>%1$s</h2><p>%2$s</p>',
+                           __( $category->name, 'insight' ),
+                           __( $category->description, 'insight' ) ); ?>
                     <ul>
                 <?php foreach ( get_posts ( array(
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 5,
                     'category' => array( $category->term_id ) ) ) as $post ) {
                     printf ( '<li><a href="%1$s">%2$s</a></li>',
                              get_permalink(),

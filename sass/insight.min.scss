@@ -6,8 +6,8 @@ sass/
 |   |-- _navigation.scss          # Navigation
 |   |-- _footer.scss              # Footer
 |
-|-- pages/
-|   |-- _index.scss               # Index Page
+|-- content/
+|   |-- _code.scss                # Styling for Code tag
 |
 |-- utils/
 |   |-- _functions.scss           # Sass Functions
@@ -15,7 +15,7 @@ sass/
 |   |-- _mixins.scss              # Sass Mixins
 |   |-- _variables.scss           # Sass Variables
 |
-`-- insight.scss                     # Primary Sass File
+`-- insight.min.scss              # Primary Sass File
 */
 
 // Utilities
@@ -28,8 +28,8 @@ sass/
 @import 'components/sections';
 @import 'components/boxes';
 
-// Pages
-//@import 'pages/index';
+// Content
+@import 'content/code';
 
 // Layout
 @import 'layout/header';

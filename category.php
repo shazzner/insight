@@ -19,7 +19,7 @@ get_header(); ?>
 
         printf( '<h1>%1$s</h1>',
                 single_cat_title(
-                    __( 'Category: ', 'insight' ), false )
+                    '', false )
         );
 
         insight_excerpt_loop();

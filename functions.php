@@ -142,6 +142,8 @@ add_action( 'init', 'insight_theme_includes', 10 );
 function insight_theme_includes() {
     // load theme template tags
     require_once( get_stylesheet_directory() . '/includes/theme-template-tags.php' );
+    // load theme filters
+    //require_once( get_stylesheet_directory() . '/includes/theme-filters.php' );
 }
 
 add_action( 'init', 'insight_theme_menus', 11 );
