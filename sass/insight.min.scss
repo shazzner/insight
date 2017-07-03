@@ -1,0 +1,37 @@
+/*
+sass/
+|
+|-- layout/
+|   |-- _header.scss              # Header
+|   |-- _navigation.scss          # Navigation
+|   |-- _footer.scss              # Footer
+|
+|-- pages/
+|   |-- _index.scss               # Index Page
+|
+|-- utils/
+|   |-- _functions.scss           # Sass Functions
+|   |-- _helpers.scss             # Class Helpers
+|   |-- _mixins.scss              # Sass Mixins
+|   |-- _variables.scss           # Sass Variables
+|
+`-- insight.scss                     # Primary Sass File
+*/
+
+// Utilities
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/helpers';
+
+// Components
+@import 'components/sections';
+@import 'components/boxes';
+
+// Pages
+//@import 'pages/index';
+
+// Layout
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';

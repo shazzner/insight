@@ -20,6 +20,8 @@
         <header role="banner" class="site-header default-site-header">
             <div class="site-header-container">
                 <?php
+                viability_custom_logo();
+                
                 if ( has_nav_menu( 'main-menu' ) ) {
 
                     wp_nav_menu( array(
@@ -32,16 +34,6 @@
                     );
                 }
                 ?>
-                <?php viability_custom_logo(); ?>
             </div>
-        </header>
-        <header role="banner" class="site-header mobile-site-header">
-            <div class="site-header-container">
-                <button type="button" class="toggle-menu" role="button" aria-label="<?php esc_attr_e( 'Toggle Navigation', 'insight' ); ?>">
-                    <span class="navicon"></span>
-                </button>
-                <?php viability_custom_logo(); ?>
-            </div>
-        </header>
-        
+        </header>                
 

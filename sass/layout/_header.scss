@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+# Site Header
+--------------------------------------------------------------*/
+.site-header {
+    @include padding-fixed(18, 0, 0, 0);
+    @include breakpoint(820) {
+        @include padding-fixed(18, 30, 18, 30);
+    }
+}
+
+/*--------------------------------------------------------------
+# Site Header Container
+--------------------------------------------------------------*/
+.site-header-container {
+    align-items: inherit;
+    display: block;
+    justify-content: inherit;
+    @include breakpoint(820) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/*--------------------------------------------------------------
+# Custom Logo Link
+--------------------------------------------------------------*/
+.custom-logo-link {
+    @include center-block;
+    @include breakpoint(820) {
+        align-self: center;
+        margin: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Site Title
+--------------------------------------------------------------*/
+.viability-site-title {
+    align-self: auto;
+    @include breakpoint(820) {
+        align-self: center;
+    }
+}

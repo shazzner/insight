@@ -1,0 +1,73 @@
+/*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+.site-footer {
+    @include breakpoint(490) {
+        text-align: left;
+    }
+}
+
+.page-template-page-builder,
+.single-wap8-portfolio {
+    .site-footer {
+        margin-top: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Site Footer Containers
+--------------------------------------------------------------*/
+.site-footer-container,
+.site-footer-menu-container {
+    @include grid-width($col-12-width);
+    @include center-block;
+}
+
+/*--------------------------------------------------------------
+# Footer Menu Container
+--------------------------------------------------------------*/
+.site-footer-menu-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*--------------------------------------------------------------
+# Footer Menu Column
+--------------------------------------------------------------*/
+.footer-menu-col {
+    @include margin-bottom(27);
+    text-align: left;
+    width: 50%;
+    @include breakpoint(720) {
+        width: 25%;
+    }
+    h3 {
+        @include typeset($base-font-size, 21);
+        @include margin-bottom(5 * $vertical-rhythm-multiple);
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer Links
+--------------------------------------------------------------*/
+.footer-links {
+    @include reset-list;
+    @include typeset(15, 19);
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Site Copyright Line
+--------------------------------------------------------------*/
+.site-c-line {
+    @include breakpoint(490) {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .c-line {
+            align-self: flex-start;
+            flex-grow: 1;
+        }
+    }
+}

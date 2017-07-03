@@ -1,0 +1,16 @@
+.insight-section {
+    text-align: center;
+    @include padding-fixed(15, 15, 15, 15);
+    @include breakpoint(820) {
+        @include padding-fixed(45, 15, 45, 15);
+    }
+    h2 {
+        @include typeset($header-1-size, (11 * $vertical-rhythm-multiple));
+    }
+}
+.insight-container {
+    @include clearfix;
+    @include grid-width($col-12-width);
+    @include center-block;
+}
+

@@ -26,7 +26,7 @@
                         );
                     }
                     printf(
-                        __( '<div class="c-line"><p>Copyright &copy; %1$s %2$s.</p><p><a href="%3$s" target="_blank">Liftoff</a> designed and built by <a href="%4$s" target="_blank">Heavy Heavy</a>.</p></div>', 'liftoff' ),
+                        __( '<div class="c-line"><p>Copyright &copy; %1$s %2$s.</p><p><a href="%3$s" target="_blank">Insight</a> designed and built by <a href="%4$s" target="_blank">Heavy Heavy</a>.</p></div>', 'liftoff' ),
                         esc_html( date( 'Y' ) ),
                         esc_html( get_bloginfo( 'name' ) ),
                         esc_url( '//getviability.com/themes/insight' ),

@@ -1,0 +1,233 @@
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+// Grid Width
+@mixin grid-width($size) {
+    max-width: px($size);
+    max-width: rem($size);
+}
+
+// Responsive Breakpoint
+@mixin breakpoint($size) {
+    @media only screen and (min-width: em($size)) {
+        @content
+    }
+}
+
+// Container Width
+@mixin container-width {
+    @include grid-width($col-12-width);
+    @include center-block;
+}
+
+// Float Right
+@mixin floating-right {
+    float: right;
+}
+
+// Float Left
+@mixin floating-left {
+    float: left;
+}
+
+// Clearfix
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+// Center Block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+// Reset List
+@mixin reset-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+// Font Setting
+@mixin font-setting($family, $style, $weight) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+}
+
+// Typset
+@mixin typeset($size, $leading) {
+    font-size: px($size);
+    font-size: rem($size);
+    line-height: leading($leading, $size);
+}
+
+// Post Meta Typeset
+@mixin postmeta-typeset {
+    @include typeset($small-font-size, (6 * $vertical-rhythm-multiple));
+}
+
+// Footnote Typeset
+@mixin small-typeset {
+    @include typeset(12, 16);
+}
+
+/*--------------------------------------------------------------
+# Margin
+--------------------------------------------------------------*/
+
+// Fixed Margin
+@mixin margin-fixed($top, $right, $bottom, $left) {
+    margin: px($top) px($right) px($bottom) px($left);
+    margin: rem($top) rem($right) rem($bottom) rem($left);
+}
+
+// Margin Bottom
+@mixin margin-bottom($size) {
+    margin-bottom: px($size);
+    margin-bottom: rem($size);
+}
+
+// Margin Top
+@mixin margin-top($size) {
+    margin-top: px($size);
+    margin-top: rem($size);
+}
+
+// Margin Right
+@mixin margin-right($size) {
+    margin-right: px($size);
+    margin-right: rem($size);
+}
+
+// Margin Left
+@mixin margin-left($size) {
+    margin-left: px($size);
+    margin-left: rem($size);
+}
+
+/*--------------------------------------------------------------
+# Padding
+--------------------------------------------------------------*/
+
+// Fixed Padding
+@mixin padding-fixed($top, $right, $bottom, $left) {
+    padding: px($top) px($right) px($bottom) px($left);
+    padding: rem($top) rem($right) rem($bottom) rem($left);
+}
+
+// Fluid Padding
+@mixin padding-fluid($top, $right, $bottom, $left, $context) {
+    padding: ($top / $context * 100%) ($right / $context * 100%) ($bottom / $context * 100%) ($left / $context * 100%);
+}
+
+// Padding Bottom
+@mixin padding-bottom($size) {
+    padding-bottom: px($size);
+    padding-bottom: rem($size);
+}
+
+// Padding Top
+@mixin padding-top($size) {
+    padding-top: px($size);
+    padding-top: rem($size);
+}
+
+// Padding Right
+@mixin padding-right($size) {
+    padding-right: px($size);
+    padding-right: rem($size);
+}
+
+// Padding Left
+@mixin padding-left($size) {
+    padding-left: px($size);
+    padding-left: rem($size);
+}
+
+/*--------------------------------------------------------------
+# Borders
+--------------------------------------------------------------*/
+
+// Post Meta Divider
+@mixin postmeta-border {
+    @include border-top(2, solid, $light-border-color);
+    @include padding-fixed(9 * $vertical-rhythm-multiple, 0, 9 * $vertical-rhythm-multiple, 0);
+}
+
+// Border
+@mixin border($size, $style, $color) {
+    border: px($size) $style $color;
+}
+
+// Border Top
+@mixin border-top($size, $style, $color) {
+    border-top: px($size) $style $color;
+}
+
+// Border Bottom
+@mixin border-bottom($size, $style, $color) {
+    border-bottom: px($size) $style $color;
+}
+
+// Border Right
+@mixin border-right($size, $style, $color) {
+    border-right: px($size) $style $color;
+}
+
+// Border Left
+@mixin border-left($size, $style, $color) {
+    border-left: px($size) $style $color;
+}
+
+/*--------------------------------------------------------------
+# Miscellaneous
+--------------------------------------------------------------*/
+
+// Screen Reader
+@mixin screen-reader {
+    left: -9999em;
+    position: absolute;
+    top: -9999em;
+}
+
+// Hide Element
+@mixin hide-element {
+    display: none;
+}
+
+// Truncate Text
+@mixin truncate-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+// Truncate Text Scroll
+@mixin truncate-text-scroll {
+    display: block;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+// Appearance
+@mixin appearance($target) {
+    -webkit-appearance: $target;
+       -moz-appearance: $target;
+         -o-appearance: $target;
+}

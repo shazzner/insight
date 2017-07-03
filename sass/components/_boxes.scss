@@ -1,0 +1,23 @@
+.category-container {
+
+    display: inline-block;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;    
+    
+    .category-container-box {
+
+        @include padding-fixed(15, 30, 15, 30);
+        @include postmeta-typeset;
+        
+        flex: 0 1 auto;
+        margin: auto;
+        
+        ul {
+            @include reset-list;
+            text-align: left;
+        }
+    }
+    
+}
