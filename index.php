@@ -35,6 +35,10 @@ get_header(); viability_blog_hero(); ?>
                              __( $post->post_name, 'insight' ) );
                 } ?>
                     </ul>
+                    <?php printf( '<a href="%1$s">%2$s</a>',
+                                  get_category_link( $category->term_id ),
+                                  __( 'See All', 'insight' )
+                    ); ?>
                 </div>        
             <?php 
             }
