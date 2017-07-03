@@ -32,7 +32,7 @@ get_header(); viability_blog_hero(); ?>
                     'category' => array( $category->term_id ) ) ) as $post ) {
                     printf ( '<li><a href="%1$s">%2$s</a></li>',
                              get_permalink(),
-                             __( $post->post_name, 'insight' ) );
+                             __( $post->post_title, 'insight' ) );
                 } ?>
                     </ul>
                     <?php printf( '<a href="%1$s">%2$s</a>',
