@@ -24,6 +24,9 @@
                 
                 if ( has_nav_menu( 'main-menu' ) ) {
 
+                    printf ( '<a class="main-menu-toggle primary-button" href="#"><span class="main-menu-toggle-label">%1$s</span></a>',
+                              __( 'Show menu', 'insight' ) );
+
                     wp_nav_menu( array(
                         'theme_location'  => 'main-menu',
                         'container'       => 'nav',

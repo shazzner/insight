@@ -45,6 +45,7 @@ get_header(); viability_blog_hero(); ?>
             }
             ?>
         </div>
+        
     </div>
 </section>
 <?php get_footer(); ?>

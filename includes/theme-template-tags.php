@@ -164,11 +164,11 @@ function insight_excerpt_loop( ) {
 
 function insight_index_search() {
     ?>
-    <form role="search" method="get" id="searchform" class="insight_index_search" action="<?php echo home_url( '/' ); ?>">
+    <form role="search" method="get" id="searchform" class="insight-index-search" action="<?php echo home_url( '/' ); ?>">
         <div>
             <label class="screen-reader-text" for="s"><?php _e( 'Search for:', 'insight' ); ?></label>
-            <input type="text" value="" name="s" id="s" placeholder="<?php _e( 'Search documentation...', 'insight' ); ?>" />
-            <input type="submit" id="searchsubmit" value="<?php _e( 'Search', 'insight'); ?>" />
+            <input type="text" value="" name="s" class="index-search-input" id="s" placeholder="<?php _e( 'Search documentation...', 'insight' ); ?>" />
+            <input type="submit" class="index-search-button" id="searchsubmit" value="<?php _e( 'Search', 'insight'); ?>" />
         </div>
     </form>
     <?php 

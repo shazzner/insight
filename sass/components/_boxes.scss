@@ -10,9 +10,23 @@
 
         @include padding-fixed(15, 30, 15, 30);
         @include postmeta-typeset;
+                
+        margin: 0;
+        @include margin-bottom(30);        
+        width: 100%;
         
-        flex: 0 1 auto;
-        margin: auto;
+        @include breakpoint(485) {
+            width: auto;
+            @include grid-width($col-6-width);
+            flex: 0 1 auto;
+            margin: auto;
+            @include margin-bottom(30);        
+        }
+
+        @include breakpoint(820) {            
+            @include margin-bottom(45);        
+            @include grid-width($col-12-width);
+        }
         
         ul {
             @include reset-list;
