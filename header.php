@@ -24,8 +24,9 @@
                 
                 if ( has_nav_menu( 'main-menu' ) ) {
 
+                    // TODO Fix locale bug in Viability theme
                     printf ( '<a class="main-menu-toggle primary-button" href="#"><span class="main-menu-toggle-label">%1$s</span></a>',
-                              __( 'Show menu', 'insight' ) );
+                              __( 'Show Menu', 'insight' ) );
 
                     wp_nav_menu( array(
                         'theme_location'  => 'main-menu',
