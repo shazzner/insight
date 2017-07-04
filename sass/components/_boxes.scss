@@ -4,7 +4,7 @@
     display: flex;
 
     flex-direction: row;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     
     .category-container-box {
 
@@ -25,7 +25,7 @@
 
         @include breakpoint(820) {            
             @include margin-bottom(45);        
-            @include grid-width($col-12-width);
+            @include grid-width($col-3-width);
         }
         
         ul {
