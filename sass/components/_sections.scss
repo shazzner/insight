@@ -25,10 +25,7 @@
             }
         }
     }
-    .insight-index-search {
-
-        display: block;
-        width: 100%;
+    .insight-index-search {        
 
         padding: 0;
         
@@ -38,7 +35,19 @@
         }
 
         .index-search-input {
+            
+            display: block;
+            width: 100%;
+
             @include margin-bottom(15);            
+
+            @include breakpoint(485) {
+                display: inline;
+                max-width: 100%;
+                width: px(120 * $vertical-rhythm-multiple);
+                width: rem(120 * $vertical-rhythm-multiple);
+            }
+            
         }
 
         @include breakpoint(820) {
