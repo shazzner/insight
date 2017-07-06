@@ -5,33 +5,71 @@
 
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
     .category-container-box {
 
-        @include padding-fixed(15, 30, 15, 30);
+        justify-content: flex-start;
         @include postmeta-typeset;
-                
+        
         margin: 0;
         @include margin-bottom(30);        
         width: 100%;
+
+        text-align: left;
+
+        h2,h3 {
+            color: $primary-bg-color;
+        }
+        h2 {
+            @include padding-fixed(15, 30, 0, 30);
+            background-color: $teal-blue;
+            @include typeset(24, 24);
+            margin-bottom: 0;
+        }
+        h3 {
+            @include padding-fixed(0, 30, 15, 30);
+            background-color: $teal-blue;
+            font-weight: 300;
+            @include typeset(15, 30);
+            @include margin-bottom(0);
+        }
         
         @include breakpoint(485) {
-            width: auto;
-            @include grid-width($col-6-width);
-            flex: 0 1 auto;
-            margin: auto;
-            @include margin-bottom(30);        
+            @include grid-width($col-3-width);
+            flex: 1 1 auto;
+            @include margin-fixed(15,0,15,30);        
         }
 
-        @include breakpoint(820) {            
-            @include margin-bottom(45);        
-            @include grid-width($col-3-width);
+        @include breakpoint(845) {            
+            @include margin-fixed(15,0,15,30);        
+            @include grid-width($col-4-width);
         }
         
-        ul {
+        ul {            
             @include reset-list;
+            @include padding-fixed(15, 30, 0, 30);
+            @include margin-bottom(0);
             text-align: left;
+            li:last-child {
+                @include margin-bottom(0);
+            }
         }
+
+        .category-box-link {
+            @include padding-fixed(15, 30, 15, 30);
+            a.button {
+                text-align: center;
+                width: 100%;
+                background-color: $primary-button-color;
+                color: $primary-button-text-color;
+                :hover {
+                    color: $primary-button-text-color;
+                }
+            } 
+        }
+        
     }
     
 }
