@@ -39,8 +39,9 @@
         padding: 0;
         
         @include breakpoint(485) {
-            @include padding-fixed(15, 15, 15, 15);
+            @include padding-fixed(15, 15, 0, 15);
             @include grid-width($col-12-width);
+            
         }
 
         .index-search-input {
@@ -57,6 +58,7 @@
                 max-width: 100%;
                 width: px(120 * $vertical-rhythm-multiple);
                 width: rem(120 * $vertical-rhythm-multiple);
+                @include margin-bottom(0);
             }
             
         }
