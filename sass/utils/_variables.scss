@@ -34,7 +34,7 @@ $alpha-seventy-white: rgba($white, 0.7);
 $alpha-eighty-white: rgba($white, 0.8);
 $alpha-ninety-white: rgba($white, 0.9);
 
-// Project Color Values
+// Viability Color Values
 $mountain-meadow: #17b890;
 $anti-flash-white: #edf3f6;
 $charleston-green: #272829;
@@ -45,32 +45,44 @@ $infra-red: #ef476f;
 $blonde: #f4f1bb;
 $russian-green: #6b8f71;
 
+// Flat UI
+$sun_flower: #F1C40F;
+$orange: #F39C12;
+$carrot: #E67E22;
+$pumpkin: #D35400;
+$alizarin: #E74C3C;
+$pomegranate: #C0392B;
+$clouds: #ECF0F1;
+$silver: #BDC3C7;
+$concrete: #95A5A6;
+$asbestos: #7F8C8D;
+
 // Text Colors
 $text-color: $dark-liver;
 $header-color: $dark-liver;
-$header-color-alt: $terra-cotta;
+$header-color-alt: $orange;
 $light-text-color: lighten($text-color, 15%);
 $code-color: $teal-blue;
 
 // Link Colors
-$link-color: $mountain-meadow;
-$link-color-hover: lighten($mountain-meadow, 10%);
+$link-color: $pumpkin;
+$link-color-hover: lighten($pumpkin, 10%);
 
 // Button Colors
 $primary-button-color: $link-color;
 $primary-button-color-hover: lighten($link-color, 5%);
 $primary-button-text-color: $white;
 $primary-button-text-color-hover: $white;
-$secondary-button-color: $terra-cotta;
-$secondary-button-color-hover: lighten($terra-cotta, 10%);
+$secondary-button-color: $header-color-alt;
+$secondary-button-color-hover: lighten($header-color-alt, 10%);
 $secondary-button-text-color: $white;
 $secondary-button-text-color-hover: $white;
 
 // Background Colors
-$body-bg: $anti-flash-white;
+$body-bg: $clouds;
 $primary-bg-color: $white;
-$dark-bg-color: $charleston-green;
-$light-bg-color: $anti-flash-white;
+$dark-bg-color: $asbestos;
+$light-bg-color: $clouds;
 $gray-bg-color: $ninety-percent-gray;
 
 // Border Colors

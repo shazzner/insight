@@ -12,7 +12,7 @@
 
         justify-content: flex-start;
         @include postmeta-typeset;
-        
+
         margin: 0;
         @include margin-bottom(30);        
         width: 100%;
@@ -22,13 +22,12 @@
         @include border(1, solid, $light-border-color);
 
         .category-container-box-header {
-            color: $header-color;
-            background-color: $light-bg-color;
+            color: $white;
+            background-color: $text-color;
         }
         
         h2 {
-            @include padding-fixed(11, 30, 0, 30);
-            
+            @include padding-fixed(13, 30, 0, 30);
             @include typeset(18, 18);
             margin-bottom: 0;
         }
@@ -40,15 +39,21 @@
             @include margin-bottom(0);
         }
         
-        @include breakpoint(485) {
+        @include breakpoint(567) {
             @include grid-width($col-3-width);
             flex: 1 1 auto;
-            @include margin-fixed(15,0,15,30);        
+            @include margin-fixed(15,0,15,0);
+            &:last-child {
+                @include margin-left(30);
+            }
         }
 
         @include breakpoint(845) {            
-            @include margin-fixed(15,0,15,30);        
+            @include margin-fixed(15,0,15,0);        
             @include grid-width($col-4-width);
+            &:last-child {
+                @include margin-left(30);
+            }
         }
         
         ul {            
@@ -57,10 +62,15 @@
             @include margin-bottom(0);
             text-align: left;
             li {
+                a {
+                    color: $text-color;
+                    &:hover {
+                        color: $link-color-hover;
+                    }
+                }
                 @include typeset(15, 26);
                 @include padding-bottom(5);
-                @include border-bottom(1, solid, $light-border-color);
-                //@include border-bottom(1, solid, $gray-bg-color);
+                @include border-bottom(1, dotted, $light-border-color);
             }
             li:last-child {
                 @include margin-bottom(0);

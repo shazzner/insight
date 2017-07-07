@@ -50,6 +50,9 @@ function insight_theme_setup() {
 
     require_once( get_template_directory() . '/includes/updater/theme-updater-class.php' );
 
+    // Customizer stuff
+    require_once( get_stylesheet_directory() . '/admin/customizer-output.php' );
+
     new EDD_Theme_Updater( array(
         'remote_api_url'   => EDD_SL_STORE_URL,
 	    'version' 	       => INSIGHT_VERSION,

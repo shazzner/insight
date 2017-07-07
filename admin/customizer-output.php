@@ -19,12 +19,12 @@ function insight_customizer_styles() {
     $options = get_option( 'viability_options' ); // get the saved theme options
 
     // link colors
-    $link_color       = ( isset( $options['link_color'] ) ) ? $options['link_color'] : '#17b890';
-    $link_hover_color = ( isset( $options['link_hover_color'] ) ) ? $options['link_hover_color'] : '#1fe3b2';
+    $link_color       = ( isset( $options['link_color'] ) ) ? $options['link_color'] : '#D35400';
+    $link_hover_color = ( isset( $options['link_hover_color'] ) ) ? $options['link_hover_color'] : '#ff6a07';
 
     // background colors
-    $dark_bg_color  = ( isset( $options['dark_bg_color'] ) ) ? $options['dark_bg_color'] : '#272829';
-    $light_bg_color = ( isset( $options['light_bg_color'] ) ) ? $options['light_bg_color'] : '#edf3f6';
+    $dark_bg_color  = ( isset( $options['dark_bg_color'] ) ) ? $options['dark_bg_color'] : '#7F8C8D';
+    $light_bg_color = ( isset( $options['light_bg_color'] ) ) ? $options['light_bg_color'] : '#ECF0F1';
 ?>
     <style id="liftoff-customizer-styles" type="text/css">
      .hero-block, .img-bg-block, .liftoff-main-nav ul li ul, .dark-bg-color {
@@ -44,6 +44,9 @@ function insight_customizer_styles() {
      }
      .banner-social-links li a, .banner-social-links li a:visited, .dark-bg-color .banner-social-links li a:hover, .dark-bg-color .banner-social-links li a:active, .dark-bg-color .banner-social-links li a:visited:hover, .dark-bg-color .banner-social-links li a:visited:active {
          border-color: <?php echo $link_color; ?>;
+     }
+     #sidebar-primary a:hover {
+         color: <?php echo $link_hover_color; ?>;
      }
     </style>
 <?php }
