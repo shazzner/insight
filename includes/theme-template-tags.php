@@ -147,6 +147,41 @@ function insight_excerpt_loop( ) {
 }
 
 /*----------------------------------------------------------------------------*/
+/* Insight Logo
+/*----------------------------------------------------------------------------*/
+
+/**
+ * Insight Custom Logo
+ *
+ * Create a large main search form
+ *
+ * @package insight
+ * @version 1.0.0
+ * @since 1.0.0
+ * @author Chris Hardee <shazzner@heavyheavy.com>
+ *
+ */
+
+function insight_custom_logo() {
+    if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+        the_custom_logo();
+    } else {
+        $name        = get_bloginfo( 'name' );
+        $description = get_bloginfo( 'description' );
+        echo "<div class='insight-site-title'>";
+        printf(
+            '<h2 class="site-title"><a href="%1$s" rel="home" itemprop="url">%2$s</a></h2>',
+            esc_url( get_site_url() ),
+            esc_html( get_bloginfo( 'name' ) )
+        );
+        if ( $description ) {
+            echo "<span>" . esc_html( $description ) . "</span>";
+        }
+        echo "</div>";
+    }
+}
+
+/*----------------------------------------------------------------------------*/
 /* Search Form
 /*----------------------------------------------------------------------------*/
 
@@ -163,7 +198,7 @@ function insight_excerpt_loop( ) {
  */
 
 function insight_index_search() {
-    ?>
+?>
     <form role="search" method="get" id="searchform" class="insight-index-search" action="<?php echo home_url( '/' ); ?>">
         <div>
             <label class="screen-reader-text" for="s"><?php _e( 'Search for:', 'insight' ); ?></label>
@@ -173,4 +208,4 @@ function insight_index_search() {
     </form>
     <?php 
 }
-
+    

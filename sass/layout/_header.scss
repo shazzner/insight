@@ -36,9 +36,15 @@
 /*--------------------------------------------------------------
 # Site Title
 --------------------------------------------------------------*/
-.viability-site-title {
+.insight-site-title {    
     align-self: auto;
     @include breakpoint(820) {
         align-self: center;
+    }
+    h2.site-title a {
+        color: $text-color;
+    }
+    a:hover {
+        color: $link-color-hover;
     }
 }

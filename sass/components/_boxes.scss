@@ -19,7 +19,7 @@
 
         text-align: left;
 
-        @include border(1, solid, $light-border-color);
+        @include border(1, solid, $eigthy-percent-gray);
 
         .category-container-box-header {
             color: $white;
@@ -33,7 +33,7 @@
         }
         h3 {
             @include padding-fixed(0, 30, 11, 30);
-            @include border-bottom(3, solid, $light-border-color);
+            @include border-bottom(3, solid, $eigthy-percent-gray);
             font-weight: 300;
             @include typeset(14, 30);
             @include margin-bottom(0);
@@ -70,7 +70,7 @@
                 }
                 @include typeset(15, 26);
                 @include padding-bottom(5);
-                @include border-bottom(1, dotted, $light-border-color);
+                @include border-bottom(1, dotted, $eigthy-percent-gray);
             }
             li:last-child {
                 @include margin-bottom(0);
@@ -87,7 +87,8 @@
                 @include padding-top(12);
                 @include padding-bottom(12);
                 @include typeset(12, 22);
-                :hover {
+                &:hover {
+                    background-color: $primary-button-color-hover;
                     color: $primary-button-text-color;
                 }
             } 

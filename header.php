@@ -20,7 +20,7 @@
         <header role="banner" class="site-header default-site-header">
             <div class="site-header-container">
                 <?php
-                viability_custom_logo();
+                insight_custom_logo();
                 
                 if ( has_nav_menu( 'main-menu' ) ) {
 
