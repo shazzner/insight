@@ -36,15 +36,29 @@
 /*--------------------------------------------------------------
 # Site Title
 --------------------------------------------------------------*/
-.insight-site-title {    
+.insight-site-title {
+    text-align: center;
+    @include breakpoint(570) {
+        align-self: flex-start;
+        text-align: left;
+        @include margin-left(10);
+    }
     align-self: auto;
     @include breakpoint(820) {
         align-self: center;
     }
-    h2.site-title a {
-        color: $text-color;
+    h2 {
+        margin-bottom: 0;
+        a, a:visited {
+            color: $text-color;
+            &:hover, &:active {
+                color: $link-color-hover;
+            }
+        }
     }
-    a:hover {
-        color: $link-color-hover;
-    }
+    span {
+        @include margin-top(3);
+        @include postmeta-typeset;
+        display: block;
+    }    
 }
