@@ -19,20 +19,24 @@
 
         text-align: left;
 
-        h2,h3 {
-            color: $primary-bg-color;
+        @include border(1, solid, $light-border-color);
+
+        .category-container-box-header {
+            color: $header-color;
+            background-color: $light-bg-color;
         }
+        
         h2 {
-            @include padding-fixed(15, 30, 0, 30);
-            background-color: $teal-blue;
-            @include typeset(24, 24);
+            @include padding-fixed(11, 30, 0, 30);
+            
+            @include typeset(18, 18);
             margin-bottom: 0;
         }
         h3 {
-            @include padding-fixed(0, 30, 15, 30);
-            background-color: $teal-blue;
+            @include padding-fixed(0, 30, 11, 30);
+            @include border-bottom(3, solid, $light-border-color);
             font-weight: 300;
-            @include typeset(15, 30);
+            @include typeset(14, 30);
             @include margin-bottom(0);
         }
         
@@ -52,6 +56,12 @@
             @include padding-fixed(15, 30, 0, 30);
             @include margin-bottom(0);
             text-align: left;
+            li {
+                @include typeset(15, 26);
+                @include padding-bottom(5);
+                @include border-bottom(1, solid, $light-border-color);
+                //@include border-bottom(1, solid, $gray-bg-color);
+            }
             li:last-child {
                 @include margin-bottom(0);
             }
@@ -64,6 +74,9 @@
                 width: 100%;
                 background-color: $primary-button-color;
                 color: $primary-button-text-color;
+                @include padding-top(12);
+                @include padding-bottom(12);
+                @include typeset(12, 22);
                 :hover {
                     color: $primary-button-text-color;
                 }

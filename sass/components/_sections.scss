@@ -1,8 +1,8 @@
 .insight-section {
     text-align: center;
-    @include padding-fixed(15, 15, 15, 15);
+    @include padding-fixed(15, 15, 15, 15);    
     @include breakpoint(820) {
-        @include padding-fixed(45, 15, 45, 15);
+        @include padding-fixed(45, 15, 0, 15);
     }    
     h1, h2 {
         @include typeset($header-1-size, (11 * $vertical-rhythm-multiple));
@@ -38,6 +38,8 @@
             
             display: block;
             width: 100%;
+
+            @include padding-fixed(12, 12, 12, 12);
 
             @include margin-bottom(15);            
 

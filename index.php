@@ -25,7 +25,7 @@ get_header(); viability_blog_hero(); ?>
                 'number' => 2 ) ) as $category ) {
             ?>
                 <div class="category-container-box default-bg-color">
-            <?php printf ( '<h2>%1$s</h2><h3>%2$s</h3>',
+            <?php printf ( '<div class="category-container-box-header"><h2>%1$s</h2><h3>%2$s</h3></div>',
                            __( $category->name, 'insight' ),
                            __( $category->description, 'insight' ) ); ?>
                     <ul>
@@ -54,7 +54,7 @@ get_header(); viability_blog_hero(); ?>
                 'number' => 2 ) ) as $category ) {
             ?>
                 <div class="category-container-box default-bg-color">
-            <?php printf ( '<h2>%1$s</h2><h3>%2$s</h3>',
+            <?php printf ( '<div class="category-container-box-header"><h2>%1$s</h2><h3>%2$s</h3></div>',
                            __( $category->name, 'insight' ),
                            __( $category->description, 'insight' ) ); ?>
                     <ul>
