@@ -63,6 +63,14 @@
             
         }
 
+        .index-search-button {
+            width: 100%;
+            
+            @include breakpoint(485) {
+                width: auto;
+            }
+        }
+
         @include breakpoint(820) {
             width: auto;
         }
